@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity(),GestureDetector.OnGestureListener,Gestu
     }
 
     override fun onFling(e1: MotionEvent?, e2: MotionEvent?, velocityX: Float, velocityY: Float): Boolean {
-        if (e1!!.getX() < e2!!.getX()){  //向右快滑
+        if (e1!!.getX() > e2!!.getX()){  //向右快滑
             PictureNo++
             if (PictureNo == TotalPictures) {PictureNo = 0}
         }
